@@ -6,13 +6,15 @@ const bodyParser = require('body-parser');
 // 만들어 놓은 모델 가져오기
 const {User} = require("./models/User");
 
+const config = require("./config/key");
+
 // bodyParser에 옵션 주기
 app.use(bodyParser.urlencoded({extended: true})); //<application/x-www-form-urlencoded> 이 형식의 데이터를 가져와서 분석할 수 있게 해 줌
 app.use(bodyParser.json()); //<application/json> 형식의 데이터를 가져올 수 있게 함
 
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://Minji:julie7864@coco.pfxwdsp.mongodb.net/?retryWrites=true&w=majority').then(() => console.log('MongoDB Connected...'))
+mongoose.connect(config.mongoURI).then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err))
 
 app.get('/', (req, res) => {
