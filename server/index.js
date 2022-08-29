@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!~~안녕하세요!')
 })
 
+app.get('/api/hello', (req, res) => {
+  res.send("안녕하세요 ~")
+})
+
 //회원가입을 위한 route 작성
 app.post('/api/users/register', (req, res) => { // post request를 했다. ==> postman에서 post로 설정
   //회원 가입 할 때 필요한 정보들을 client에서 가져오면
