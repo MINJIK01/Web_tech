@@ -40,12 +40,12 @@ userSchema.pre('save', function( next ){ //mongoose에서 가져온 method로 us
     if(user.isModified('password')) { // 사용자가 비밀번호를 바꿀 때에만 비밀번호 암호화를 진행, 다른 정보를 바꿀 때에는 아래 코드를 실행하지 않음.
             //비밀번호를 암호화 시킨다. 1. Salt 만들기
         bcrypt.genSalt(saltRounds, function(err, salt) {
-            if(err) return next(err)
+            if(err) return next(err);
 
             bcrypt.hash(user.password, salt, function(err, hash) {
                 //store hash in yout password DB.
-                if(err) return next(err) // 오류 나면 index.js에 user.save로 이동
-                user.password = hash
+                if(err) return next(err); // 오류 나면 index.js에 user.save로 이동
+                user.password = hash;
                 next() // move to the code, which saves the User information, in the index.js 
             })
         })
