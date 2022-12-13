@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <h1>Example: calculation using the output element</h1>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output -->
+  
+  <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" name="b" value="50"> +
+    <input type="number" name="a" value="10"> =
+    <output name="result"></output>
+  </form>
+ 
+</body>
+</html>

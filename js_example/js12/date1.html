@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <h1>Date example</h1>
+
+  <script>
+    "use strict";
+    
+    let now = new Date();
+    document.write('Date:'+now+'<br>');
+    let year = now.getFullYear();
+    document.write('Year: '+year+'<br>');
+    let time = now.getTime();
+    document.write('Time: '+time+'<br>'); 
+
+
+
+    // Note: length is a property, toUpperCase is a method
+    let str="Hello World!";
+    document.write(str.length+"<br>");       // 12
+    document.write(str.toUpperCase());       // HELLO WORLD!
+
+  </script>
+
+</body>
+</html>

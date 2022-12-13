@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+    
+    function printNChars(n, ch) {
+      for (let i=0; i<n; i++)
+        document.write(ch);
+    }
+
+    document.write("<p>");
+    printNChars(Math.random()*10, "a");
+    document.write("<br>");
+    printNChars(Math.random()*10, "b");
+    document.write("</p>");
+
+  </script>
+
+</body>
+</html>

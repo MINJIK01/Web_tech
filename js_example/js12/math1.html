@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+  <style>
+    /* example will only work if a monospace font is used */
+    body { font-family: monospace; }
+  </style>
+</head>
+
+<body>
+
+  <p>Maths</p>
+
+  <script>
+    "use strict";
+    
+    function displaySpaces(n) {
+      for (let j=0; j<n; ++j) {
+	    document.write('&nbsp;');
+	  }
+    }
+  
+    function displayStars(n) {
+      for (let j=0; j<n; ++j) {
+	    document.write('*');
+	  }
+    }
+
+    const MAX_STARS = 20;
+  
+    for (let i=0; i<360; i+=10) {
+      let radians = i *Math.PI/180;
+      let x = Math.sin(radians);
+      let numStars = Math.round(x*MAX_STARS);
+	
+      if (i<=180) {
+        displaySpaces(MAX_STARS);
+        displayStars(numStars);
+        displaySpaces(MAX_STARS-numStars);
+        document.write(' ' + x.toFixed(2));
+      }
+      else {
+        numStars = -numStars;
+        displaySpaces(MAX_STARS-numStars);
+        displayStars(numStars);
+        displaySpaces(MAX_STARS);
+        document.write(x.toFixed(2));
+      }
+
+      document.write('<br>');
+    }
+  
+    // document.write("i= " + i);
+    // document.write(", radians= " + radians.toFixed(2));
+    // document.write(", sin(i)=" + x.toFixed(2) + "<br>");  
+  </script>
+
+</body>
+</html>

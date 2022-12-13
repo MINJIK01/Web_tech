@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <h1>Example: Mouse</h1>
+  <p id = "result_move"></p>
+  <p id = "result_click"></p>
+
+  <script>
+    "use strict;"
+
+    function showMove(event) {
+      let str = "x,y: " + event.clientX + ", " +event.clientY;
+      document.getElementById('result_move').textContent = str;
+    }
+
+    function showClick(event) {
+      let str = "x,y: " + event.clientX + ", " +event.clientY;
+      document.getElementById('result_click').textContent = str;
+    }
+
+    document.addEventListener('mousemove', showMove);
+    document.addEventListener('click', showClick);
+
+  </script>
+
+</body>
+</html>

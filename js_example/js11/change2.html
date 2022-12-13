@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    let pence=prompt('Amount in pence? ');
+    document.write('<p>Amount in pence: '+pence+'</p>');
+    let coins = Math.floor(pence/200);
+    if (coins!=0)
+      document.write('<p>&pound;2 coins: '+coins+'</p>');
+    pence = pence%200;
+    coins = Math.floor(pence/100);
+    if (coins!=0)
+      document.write('<p>&pound;1 coins: '+coins+'</p>');
+    pence = pence%100;
+    coins = Math.floor(pence/50);
+    if (coins!=0)
+      document.write('<p>50p coins: '+coins+'</p>');
+    pence = pence%50;
+    coins = Math.floor(pence/20);
+    if (coins!=0)
+      document.write('<p>20p coins: '+coins+'</p>');
+    pence = pence%20;
+    coins = Math.floor(pence/10);
+    if (coins!=0)
+      document.write('<p>10p coins: '+coins+'</p>');
+    pence = pence%10;
+    coins = Math.floor(pence/5);
+    if (coins!=0)
+      document.write('<p>5p coins: '+coins+'</p>');
+    pence = pence%5;
+    coins = Math.floor(pence/2);
+    if (coins!=0)
+      document.write('<p>2p coins: '+coins+'</p>');
+    pence = pence%2;
+    coins = Math.floor(pence);
+    if (coins!=0)
+      document.write('<p>1p coins: '+coins+'</p>');
+  </script>
+
+</body>
+</html>

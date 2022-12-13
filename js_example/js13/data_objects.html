@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict"; 
+    
+    let show = function(s) {
+      document.write("<p>"+s+"</p>");
+    }
+
+    let point = {x:10, y:20};
+//    let point = {'x':10, 'y':20};
+
+    show(point);
+    show("point.x: "+point.x);
+    show("point.y: "+point.y);
+    show("point.z: "+point.z);
+
+    show(JSON.stringify(point));
+
+    
+    let picasso = {
+      'forename'   : 'Pablo',
+      'middle'     : ['Diego', 'Jose', 
+                      'Francisco de Paula',
+                      'Juan', 'Nepomuceno', 
+                      'Maria de los Remedios', 
+                      'Cipriano de la Santisima', 
+                      'Trinidad', 'Ruiz y'],
+      'surname'    : 'Picasso',
+      'occupation' : 'artist'
+    };
+
+    show(JSON.stringify(picasso));
+    show(picasso.forename + " " + picasso.surname + 
+         " had " + picasso.middle.length + " middle names");
+
+  </script>
+
+</body>
+</html>

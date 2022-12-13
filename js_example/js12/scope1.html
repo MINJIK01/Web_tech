@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+
+    var i = 1;            // global scope
+    j = 2;                // global scope 
+
+    if (i>j) {
+      var k = 3;          // global scope 
+    }
+
+    function a() {
+      var i = 0;          // local scope, i.e. just this function
+      document.write(i+"<br>"); // display 0
+      m = 4;              // global scope, once the function is called
+      if (m > i)
+        var n = 4;        // local scope anywhere in the function after this line
+      j = 3;
+    }
+
+    document.write(i+"<br>");   // display 1
+    a();
+    document.write(i+", "+m);      // display 1, 4
+
+
+  </script>
+
+</body>
+</html>

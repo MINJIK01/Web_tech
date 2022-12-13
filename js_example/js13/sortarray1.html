@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict"; 
+    
+    function cmp(x,y) {
+      return x < y ? -1 : x == y ? 0 : 1;
+    }
+
+    function fillArray(data) {
+      for (var i=0; i<10; i++) {
+        var number = Math.floor(Math.random()*50);
+        data.push(number)
+      }
+    }  
+
+    function displayArray(data) {
+      document.write(data);
+      document.write("<br>");
+    }
+
+    var data = [];
+    fillArray(data);
+    document.write("unsorted: ");
+    displayArray(data);
+  
+    data.sort();
+    document.write("sorted alphabetically: ");
+    displayArray(data);
+
+    data.sort(cmp);
+    document.write("sorted numerically: ");
+    displayArray(data);
+
+  </script>
+
+</body>
+</html>

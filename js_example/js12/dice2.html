@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <p>You rolled a <span id="show_dice">rolling</span>...</p>
+
+  <script>
+    "use strict";
+    
+    let elem = document.getElementById('show_dice');
+    let rolled = 1+Math.floor(Math.random()*6);
+    elem.textContent = rolled;
+
+  </script>
+
+</body>
+</html>

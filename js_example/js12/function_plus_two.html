@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+    
+    function plusTwo(x) {
+      document.write("plusTwo.1: received x="+x+"<br>");
+      let result = x+2;
+      document.write("plusTwo.2: set result to "+result+"<br>");
+      return result;
+    }
+
+    let total = 0;
+    document.write("main.1: total is: "+total+"<br>");
+    total = plusTwo(total);
+    document.write("main.2: total is: "+total+"<br>");
+    total += 2;
+    document.write("main.3: total is: "+total+"<br>");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <h1>Example: One-off timer</h1>
+
+  <script>
+    "use strict;"
+
+    const SECONDS = 1000; // 1000 milliseconds = 1 second
+
+    // Note: Calling document.write after a page has 
+    // finished loading overwrites the current document.
+    // Another reason to avoid using document.write.
+    // Also since it is the only thing written, 
+    // a warning is given in the console that
+    // "<!DOCTYPE html>" has not been encountered.
+    
+    function show(str) {
+      document.write(str);
+    }
+
+    show("started...");
+    setTimeout(function() { show("*** ALARM ***<br>"); }, 5 * SECONDS);
+    setTimeout(() => show("*** ANOTHER ALARM ***<br>"), 2 * SECONDS);
+    show("...finished");
+  </script>
+
+</body>
+</html>

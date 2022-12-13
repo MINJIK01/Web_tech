@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript examples</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+    
+    function newline() {
+      document.write("<br>");
+    }
+
+    function writeString(s) {
+      document.write(s);
+    }
+
+    function printStars(n) {
+      for (let i=0; i<n; i++)
+        document.write("*");
+    }
+
+    document.write("<p>");
+    for (let i=1; i<=4; i++) {
+      printStars(i);
+	  document.write("<br>");
+    }
+    document.write("</p>");
+
+
+    writeString("<p>");
+    for (let a=1; a<=4; a++) {
+      printStars(a);
+      writeString("<br>");
+    }
+    writeString("</p>");
+
+  </script>
+
+</body>
+</html>
