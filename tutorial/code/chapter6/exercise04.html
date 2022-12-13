@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>exercise04</title>
+    </head>
+
+    <body>
+        <p>Javascript exercise 4</p>
+
+        <script>
+            "use strict";
+
+            document.write("<p>As a paragraph, with comma-separated lists:</p>");
+            document.write("<p>x, x², x³</p>");
+            document.write("<p>");
+            for (var i = 1; i <= 10; i++){
+                document.write(i + ", ");
+                document.write(i**2 + ", ");
+                document.write(i**3 + "<br>");
+            }
+            document.write("</p>");
+
+            document.write("<p>As a table, but needs styles to make table look better</p>");
+            document.write("<table>");
+            document.write("<tr><th>x</th><th>x&sup2;</th><th>x&sup3;</th></tr>");
+            for (var i=1; i<=10; i++) {
+                document.write("<tr>");
+                document.write("<td>");
+                document.write(i);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(i*i);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(i*i*i);
+                document.write("</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+
+
+        </script>
+    </body>
+
+</html>

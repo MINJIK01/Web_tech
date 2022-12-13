@@ -1,0 +1,361 @@
+body{
+    background-color: rgb(255, 222, 227);
+    min-width: 690px; /* set min-width as 690 not to break the structure of the page*/
+    max-width: 1600px;
+    margin: 0;
+
+    animation-duration: 0.5s;
+    animation-name: slide_up;
+    animation-iteration-count:initial;
+}
+
+header{
+    margin: 0.5rem 0.5rem auto;
+}
+
+header h1{
+    font-size: 4.5em;
+    margin: 0.5rem 0.5rem auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header p{
+    margin-bottom: 2rem;
+    padding: 0 0 0 1rem;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#icon{
+    float: left;
+}
+
+nav {
+    margin: 0.5rem 0.3rem auto;;
+    padding: 47px 5%;
+    background-color: lightpink;
+    color: black;
+    font-size: 1.5em;
+    border-radius: 2em; 
+}
+  
+nav ul {  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+
+    flex-direction: column;
+}
+
+nav ul li {
+    padding-left: 3%;
+    padding-right: 10%;
+}
+
+nav a {
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    outline: none;
+    transition: box-shadow 0.5s ease;
+}
+
+nav a:link { color: black; }
+
+nav a:visited { color: black; }
+
+nav a:hover {
+    color: white;
+    background-color: rgb(170, 42, 63);
+    font-size: 1.3em;
+    box-shadow: 1em 0.7em 0.3em rgb(223, 97, 97);
+}
+
+figure{
+    margin: 0.5rem 1rem auto;
+}
+
+#selfie{
+    float: left;
+    margin: 1.1rem 0 0 1.1rem;
+}
+
+main{
+    padding: 0.2em 2% 0.2em 2%
+}
+
+/* main a:link { color: black; }
+
+main a:visited { color: black; } */
+
+main div{
+    background-color: white;
+    margin: 0.5rem 1rem auto;
+    border-radius: 2em;
+    padding-bottom: 3rem;
+    border-color: brown;
+    border-style: dashed;
+    border-width: 0.3em;
+}
+
+article h3{
+    padding: 0.5rem 5%;
+    margin-bottom: 0;
+}
+
+article h2{
+    margin: 0 0 0 0;
+    padding: 0.5rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+article p{
+    margin: 0 0 0 0;
+    padding: 0.5rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+article ul{
+    list-style:none;
+    padding: 0 0 0 5%;
+}
+
+article a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+article a:link { color: rgb(69, 68, 68); }
+
+article a:visited { color: rgb(69, 68, 68); }
+
+.module_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 3%;
+}
+
+.module_image{
+    float:left;
+    margin: 1.4rem 0 0 1.1rem;
+}
+
+main section{
+    margin: 0;
+    padding: 0;
+}
+
+section p{
+    margin: 2rem 0 0 0;
+    padding: 3rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    justify-content: center;
+}
+
+.stack_contents{
+    background-color: rgb(248, 248, 248);
+    margin: 0.5rem 1rem auto;
+
+    border-color: lightcoral;
+    border-style:solid;
+    border-width: 0.3em;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/* Quiz section */
+.quiz_name{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
+/* Q1 section */
+.ques{
+    margin: 4rem 0 0 0;
+    background-color: salmon;
+    padding: 0.5rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+
+.ques:hover{
+    color: red;
+    background-color: white;
+}
+
+/* apply trainsition to different class */
+.ques:hover ~ .answer{
+    color: black;
+}
+
+.answer{
+    margin: 1rem 0 0 0;
+    font-size: 4rem;
+    color: white;
+    background-color: white;
+    transition: color 1s ease;
+}
+
+/* Q2 section */
+
+/* make a box to show the hint */
+.box{
+    margin: 1rem auto;
+    position: relative;
+    width: 400px;
+    height: 266px;
+    border: 0.1rem solid salmon;
+    background-image:url(image/watermelon.PNG);
+}
+
+.front{
+    position: absolute; /* make the picture overlap */
+    transition: transform 1s ease;
+    border: 0.3rem solid salmon;
+}
+
+.back{
+    position: absolute; /* make the picture overlap */
+    transition: transform 1s ease;
+}
+
+.box:hover .front{
+    transform: translateX(-100px);
+}
+
+.box:hover .back{
+    transform: translateX(100px);
+}
+
+/* Q3 section */
+.inner {
+    position: relative;
+    width: 100%;
+    height: 267px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.inner:hover {
+    transform: rotateY(180deg);
+}
+
+.flip_front{
+    margin-left: -1rem;
+}
+.flip_front, .flip_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip_back {
+    background-color: salmon;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* table section */
+
+table {
+    float:left; 
+    margin: 3rem 5rem;
+}
+
+table td {
+padding-left: 3%;
+}
+
+table tr th:nth-child(1), table tr td:nth-child(1) {
+padding-left: 0;
+}
+
+/* form section */
+
+form{
+    float: right;
+    margin: 3rem 5rem;
+}
+
+#contact{
+    background-color: white;
+    overflow: hidden;
+}
+
+textarea:focus-visible {
+    outline: 2px solid crimson;
+    border-radius: 3px;
+}
+
+/* footer section */
+
+footer{
+    margin-top: 5rem;
+    background-color: darkgray;
+    padding: 0.2rem 3%;
+}
+
+footer a{
+    text-decoration: none;
+    outline: none;
+}
+
+footer a:link { color: black; }
+
+footer a:visited { color: black; }
+
+footer li::marker{
+    color: black;
+    ;
+}
+
+.footer_menu{
+    font-size: 4.5em;
+    margin: 0.5rem 0.5rem auto;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+
+
+/* large devices */
+@media screen and (min-width: 800px) {
+    nav ul{
+      flex-direction: row;
+    }
+
+    .flex {
+        flex-direction: row;
+    }
+
+}
+
+/* page loading animation */
+@keyframes slide_up {
+    from {
+        transform: translateY(-100%); 
+      }
+    
+      to {
+        transform: translateY(0%);
+      }
+}

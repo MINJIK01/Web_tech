@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Minji's form</title>
+</head>
+
+<body>
+
+    <form name = "favorite" action="/my-handling-form-page" method="post">
+
+        <p><label for = "from"> Your name:</label>
+            <input type="text" name="from" id="from"
+             maxlength="40" size="20" placeholder="type your name..."  required>
+        </p>
+
+        <p>
+            <label for = "favorite">Likes:</label>
+            <input type="checkbox" name = "likes" id="likes">Football</input>
+            <input type="checkbox" name = "likes" id="likes">Rugby Union</input>
+            <input type="checkbox" name = "likes" id="likes">Golf</input>
+            <input type="checkbox" name = "likes" id="likes">Tiddlywinks</input>
+        </p>
+
+        <p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+            <input type="reset">
+          </p>
+    </form>
+
+</body>
+</html>

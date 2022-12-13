@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>exercise05</title>
+    </head>
+
+    <body>
+        <p>Javascript exercise 5</p>
+
+        <script>
+            "use strict";
+
+            var ini_money = parseFloat(prompt("Initial sum of money?"));
+            var des_money = parseFloat(prompt("Desired sum of money?"));
+            var interest = parseFloat(prompt("Annual rate of interest?"));
+            document.write("<p>Initial sum of money: &pound" + ini_money.toFixed(2) + ", Desired sum of money: &pound" + des_money.toFixed(2) + ", Annual rate of interest: " +interest + "%</p>");
+            
+            var years = 1
+            while(ini_money < des_money){
+                ini_money += ini_money*(interest/100);
+                document.write("<p>It will take " +years+ "years to reach the desired amount</p>")
+                years ++
+            }
+        </script>
+    </body>
+
+</html>

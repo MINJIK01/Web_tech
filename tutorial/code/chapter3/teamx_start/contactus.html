@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Team X</title>
+  <link rel="stylesheet" href="./css/teamx.css">
+</head>
+
+<body id="aboutus">
+
+  <header>
+    <h1>Team X</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="fixtures.html">Fixtures</a></li>
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="contactus.html">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contact</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <aside class="pquote">
+      <blockquote>
+          <p>It is not an exaggeration to say that peas can be described as nothing less than perfect spheres of joy.</p>
+      </blockquote>
+    </aside>
+    
+    <table id="aboutustable">
+        <tr><td>Email</td><td>kmjj7864@naver.com</td></tr>
+        <tr><td>Telephone</td><td>07845 082660</td></tr>
+        <tr><td>Address</td><td>Department of Computer Science</td></tr>
+        <tr><td></td><td>address address</td></tr>
+        <tr><td></td><td>S3 7HB</td></tr>
+    </table>
+
+    <form name="myform" action="mailto:mkim74@sheffield.ac.uk?subject=Test Email" 
+        enctype="text/plain" method="post" onsubmit="alert('Email should open now...');" >
+        <!-- the JavaScript in onsubmit is only for debugging purposes -->
+    <p>
+      <label for="from">Your name:</label>
+      <input type="text" name="from" id="from"
+             maxlength="40" size="20" placeholder="type your name..."  required>
+    </p>
+
+    <p>
+      <label for="email">Your e-mail:</label>
+      <input type="email" name="email" id="email" placeholder="type your email..."
+             maxlength="40" size="20" required> <!-- 꼭 입력해야 하는 내용일 경우 required를 넣어준다.-->
+    </p>
+
+    <p>
+      <label for="comment">Your comment:</label>
+      <textarea type="comment" name="comment" id="comment" placeholder="type your comments..."
+      rows="5" cols="50"></textarea>
+    </p>
+
+    <p>
+      <input type="submit" name="submit" id="submit" value="Submit">
+      <input type="reset">
+    </p>
+
+</form>
+
+
+  </main>
+
+  <footer> 
+    <p>&copy; a web designer, 2019</p>
+  </footer>
+
+</body>
+
+</html>
