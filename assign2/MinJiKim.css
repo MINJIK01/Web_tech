@@ -1,6 +1,4 @@
-body {
-}
-
+/* draw canvas border */
 canvas { 
     border: 1px solid gray;
 }

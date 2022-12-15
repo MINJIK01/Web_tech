@@ -311,17 +311,34 @@ function mouthClicking(x, y){
         ctx.fillStyle = '#009999';
         ctx.fill(mouth);
     } else if (ctx.isPointInPath(mouth, x,  y) && state == "anger"){ // change the color of mouth when expression is anger
-        // erasing mouth
-        mouth = new Path2D();
-        mouth.arc(300,450,85,0,Math.PI,true);
-        ctx.fillStyle = 'yellow';
-        ctx.fill(mouth);
+        if (furious == true){
+            // erasing mouth
+            mouth = new Path2D();
+            mouth.arc(300,450,80,0,Math.PI,true);
+            mouth.arc(300,450,80,0,Math.PI,false);
+            ctx.fillStyle = 'yellow';
+            ctx.fill(mouth);
 
-        // changing anger mouth color
-        mouth = new Path2D();
-        mouth.arc(300,450,80,0,Math.PI,true);
-        ctx.fillStyle = '#39ac39';
-        ctx.fill(mouth); 
+            // changing anger mouth color
+            mouth = new Path2D();
+            mouth.arc(300,450,80,0,Math.PI,true);
+            mouth.arc(300,450,80,0,Math.PI,false);
+            ctx.fillStyle = '#39ac39';
+            ctx.fill(mouth);
+
+        } else{
+            // erasing mouth
+            mouth = new Path2D();
+            mouth.arc(300,450,85,0,Math.PI,true);
+            ctx.fillStyle = 'yellow';
+            ctx.fill(mouth);
+
+            // changing anger mouth color
+            mouth = new Path2D();
+            mouth.arc(300,450,80,0,Math.PI,true);
+            ctx.fillStyle = '#39ac39';
+            ctx.fill(mouth); 
+        }
     } else if (ctx.isPointInPath(mouth, x,  y) && state == "happiness"){ // change the color of mouth when expression is happiness
         // erasing mouth
         mouth = new Path2D();
@@ -342,16 +359,19 @@ function doSomthing(event) {
     let x = event.pageX;
     let y = event.pageY;
 
-    // if user click eye more than 5 times then change expression to the anger
+    // if user click eye more than 6 times then change expression to the anger
     if (eye_count > 5){
         if (state == "anger"){
             anger(ctx);
+            furious = true; // set the furious satate as true
+
+            // reset the mouth
             mouth = new Path2D();
             mouth.arc(300,400,100,0,Math.PI,false);
             ctx.fillStyle = 'yellow';
             ctx.fill(mouth);
 
-            // changing anger mouth color
+            // changing furious mouth shape (shouting)
             mouth = new Path2D();
             mouth.arc(300,450,80,0,Math.PI,true);
             mouth.arc(300,450,80,0,Math.PI,false);
@@ -401,6 +421,7 @@ let eye_count = 0;
 
 // variables for the noticing state of current expression
 let state = "nuetral";
+let furious = false; // for noticing furious state
 
 angerButton.addEventListener("click", function() { anger(ctx); }); // show anger expression
 nuetralButton.addEventListener("click", function() { nuetral(ctx); }); // show nuetral expression

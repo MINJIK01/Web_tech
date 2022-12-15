@@ -4,18 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="author" content="MinJi Kim">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="MinJiKim.css">
   <title>Face</title>
 </head>
 
 <body>
     <p>This program is for drawing face.</p>
-    <canvas id="face" width="600" height="600"></canvas>
+    <!-- making canvas -->
+    <canvas id="face" width="600" height="600"></canvas> 
+
+    <!-- making buttons -->
     <p>
       <button name="button_anger" id="button_anger">Anger</button>
       <button name="button_neutral" id="button_neutral">Neutral</button>
       <button name="button_happy" id="button_happy">Happiness</button>
     </p>
+
+    <!-- explanation of this program -->
     <p>If user chooses anger button, then eyebrows' color is changed and also their shape is changed. In addition, the mouth's shape is changed as well.</p>
     <p>If user chooses neutral button, then it is returned to the first facial state.</p>
     <p>If user chooses happiness button, then eyebrows are raised and the mouth's shape is changed. In addition, flushed cheeks are appeared.</p>
@@ -24,6 +29,6 @@
        In additon, if user clicks the upper center of the mouth, then mouth color is changed.</p>
 
   <!-- now write your own script -->
-  <script src="draw.js"></script>
+  <script src="MinJiKim.js"></script>
 </body>
 </html>
