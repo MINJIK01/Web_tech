@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Personal Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="MinJi Kim">
+        
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+
+    <figure id = "icon">
+      <img src="image/icon_with_name.PNG" alt="icon">
+    </figure>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="degree_programme.html">Degree Programme</a></li>
+        <li><a href="SGAandMySkills.html">SGA and mySkills</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1 class = "footer_menu">Contact</h1>
+      <p>This page is for interaction and it provides address and form.</p>
+    </header>
+
+    <main>
+      <div id="contact">
+        <table>
+          <tr><td>Email</td><td>dcs@sheffield.ac.uk</td></tr>
+          <tr><td>Telephone</td><td>0114 222 1800</td></tr>
+          <tr><td>Address</td><td>Department of Computer Science</td></tr>
+          <tr><td></td><td>The University of Sheffield </td></tr>
+          <tr><td></td><td>Regent Court</td></tr>
+          <tr><td></td><td>211 Portobello</td></tr>
+          <tr><td></td><td>Sheffield</td></tr>
+          <tr><td></td><td>S1 4DP</td></tr>
+        </table>
+  
+        <form name="myform" action="mailto:mkim74@sheffield.ac.uk?subject=Test Email" 
+          enctype="text/plain" method="post" onsubmit="alert('Email should open now...');" >
+          <!-- the JavaScript in onsubmit is only for debugging purposes -->
+  
+          <p>
+            <label for="email">Your email:</label>
+            <textarea type="email" name="email" id="email" placeholder="type your email..."
+            rows="1" cols="50"></textarea>
+          </p>
+  
+          <p>
+            <label for="comment">Your comment:</label>
+            <textarea type="comment" name="comment" id="comment" placeholder="type your comments..."
+            rows="5" cols="50"></textarea>
+          </p>
+  
+          <p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+            <input type="reset">
+          </p>
+  
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="asscessibility.html">Asscessibility</a></li>
+        <li><a href="legal_security.html">Legal & Security</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="testing.html">Testing</a></li>
+      </ul>
+
+      <p>&copy; MinJi Kim's Personal Portfolio, 2022</p>
+    </footer>
+</html>
